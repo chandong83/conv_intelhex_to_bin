@@ -64,7 +64,7 @@ def decodeLine(line):
         print('it is wrong data [{0} {1}]'.format(calCheck, checksum))
 
 
-def intToHex(val):
+def asciiIntToHex(val):
     dat = ord(val)
     if(dat >= 97):    
         dat = (dat-97)+10
@@ -78,7 +78,7 @@ def stringToInt(dat):
     val = 0
     for c in dat:
         val <<= 4
-        val |= intToHex(c)
+        val |= asciiIntToHex(c)
     return val 
 
 def readComma(line):
